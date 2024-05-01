@@ -9,8 +9,119 @@
 
 }
 
-body {
+html {
     font-family: "Open Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+svg {
+    width: 1.5em;
+    vertical-align: middle;
+}
+svg path {
+    fill: whitesmoke;
+}
+
+.container {
+    /* remove heigh/width when needed */
+    height: 100%;
+    background-color: var(--main-bgc, white);
+    display: grid;
+    /* Look at alternative ways for sizing */
+    grid-template-columns: minmax(250px, 1fr) 4fr;
+    grid-template-rows: minmax(250px, 1fr) 4fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+    gap: 4px
+}
+
+/* -----  HEADER -----  */
+
+header {
+    background-color: var(--secondary-bgc);
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-row: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 10px
+}
+
+header > * {
+    border: dotted 1px black
+}
+
+
+/* aligns  svg and search field*/
+form > * {
+    vertical-align: middle;
+}
+
+.search-bar input {
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.search-bar button {
+    border: none;
+    background-color: inherit;
+}
+
+.user-greeting {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 50px 1fr;
+    gap: 2rem;
+}
+
+.user-greeting svg {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 6rem;
+    place-self: center;
+}
+
+.user-account a {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+
+.wrapper {
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--standout-color);
+    padding: 6px;
+}
+
+
+
+/*  ----- SIDEBAR -----  */
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--standout-color);
+    display: grid;
+    grid-template-rows: 150px 25vh 25vh;
+    align-items: start;
+    align-content: start;
+    padding: 0 15px;
+}
+
+.sidebar > * {
+    border: solid black 1px
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    font-size: 2em;
+    color: whitesmoke;
 }
 
 a {
@@ -44,61 +155,9 @@ li {
     padding: 4px 0;
 }
 
-svg {
-    width: 1.5em;
-}
-svg path {
-    fill: whitesmoke;
-}
-.container {
-    /* remove heigh/width when needed */
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--main-bgc, white);
 
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
-    grid-template-areas: 
-    "sidebar header"
-    "sidebar main";
-    gap: 4px
-}
 
-header {
-    background-color: var(--secondary-bgc);
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-row: repeat(2, 1fr);
-    gap: 1rem
-}
-
-header > * {
-    border: dotted 1px black
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background-color: var(--standout-color);
-    display: grid;
-    grid-template-rows: 150px 25vh 25vh;
-    align-items: start;
-    align-content: start;
-    padding: 0 15px;
-}
-
-.sidebar > * {
-    border: solid black 1px
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    align-self: center;
-    font-size: 2em;
-    color: whitesmoke;
-}
+/* -----  MAIN CONTENT ----- */
 
 main {
     grid-area: main;
@@ -116,10 +175,13 @@ main > * {
 .projects {
     grid-column: 1/2;
     grid-row: 1/3;
+    padding: 12px;
 
     display: grid;
-    grid-template-rows: 5vh repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 5vh repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
     gap: 1rem;
+    align-items: center;
 }
 
 .projects h2 {
@@ -128,13 +190,23 @@ main > * {
 
 .project-actions {
     display: flex;
-}
-
-.announcements {
-    grid-column: 2/3;
+    justify-content: end;
 }
 
 .project-card {
     border: solid black 1px;
     border-radius: 1em;
+    padding: 1em;
+}
+
+.project-card:nth-child(2n+1){
+    background-color: #FFBF69;
+}
+
+.project-card:nth-child(2n){
+    background-color: salmon;
+}
+
+.announcements {
+    grid-column: 2/3;
 }
