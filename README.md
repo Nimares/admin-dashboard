@@ -3,17 +3,17 @@ admin dashboard blueprint. Created as a project to practice css
 
 
 To-do
-* header:
+* [X]header:
     - search bar
     - title
     - user-action buttons
     - user account
-* projects:
+* [X]projects:
     - Auto creation of rows/columns
     - variable color styles? using psuedo elements
 * announcements
-    - add simple content
-    - add underline using psuedo elements
+    - [X]add simple content
+    - [X]add underline using psuedo elements
     - add border-shadow
 * trending
     - icons, title, etc
@@ -43,3 +43,4 @@ Lessons learned:
     * inline SVG offers nice customization options
     * using a combination of nested svg, and display: flex, and transform on links create for enlarge hover effects
     * Leave color pallet for last OR create fullmockup and styleguide before page creation. 
+    * Use SVG sparingly, otherwise your HTML will be cluttered
