@@ -77,6 +77,12 @@ header {
     place-self: center;
 }
 
+.user-logo-border {
+    border: black solid 5px;
+    border-radius: 50%;
+    padding: 2px
+}
+
 .user-name {
     font-size: 2rem;
     display: block;
@@ -193,13 +199,6 @@ main > * {
     padding: 1em;
 }
 
-.project-card:nth-child(2n+1){
-    background-color: #FFBF69;
-}
-
-.project-card:nth-child(2n){
-    background-color: salmon;
-}
 
 .announcements {
     grid-column: 2/3;
@@ -218,9 +217,4 @@ main > * {
 
 li img {
     border: solid black 1px;
-}
-
-.user-greeting svg {
-    border: black solid 5px;
-    border-radius: 50%;
 }
