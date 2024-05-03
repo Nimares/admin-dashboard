@@ -4,8 +4,9 @@
     --main-bgc: rgb(92, 198, 199);
     --secondary-bgc: #A9D6E5;
     --standout-color: rgb(39 60 73);
-    --card-shadow: #606162;
+    --border-shadow: #606162;
     --complementary-color: #FFBF69;
+    --text-color: whitesmoke;
 
 }
 
@@ -31,7 +32,7 @@ svg {
     vertical-align: middle;
 }
 svg path {
-    fill: whitesmoke;
+    fill: var(--text-color);
 }
 
 .container {
@@ -40,8 +41,8 @@ svg path {
     background-color: var(--main-bgc, white);
     display: grid;
     /* Look at alternative ways for sizing */
-    grid-template-columns: 12.5vw 1fr;
-    grid-template-rows: 12.5vh 1fr;
+    grid-template-columns: minmax(200px, 250px) 1fr;
+    grid-template-rows: minmax(120px, 200px) 1fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main";
@@ -100,7 +101,7 @@ header {
     border-radius: 0.75rem;
     padding: 0.2rem;
     border: none;
-    color:whitesmoke; 
+    color: var(--text-color); 
     background-color: var(--standout-color);
 }
 
@@ -111,20 +112,16 @@ header {
     background-color: var(--standout-color);
     display: grid;
     grid-template-rows: 15vh 25vh 25vh;
-    grid-template-columns: 100%;
+    grid-template-columns: minmax(200px, 250px);
     align-items: start;
     align-content: start;
     padding: 0 15px;
 }
 
-.sidebar > * {
-    border: solid black 1px
-}
-
 .logo {
-    align-self: center;
     font-size: 2em;
-    color: whitesmoke;
+    color: var(--text-color);
+    padding-top: 10px
 }
 
 a {
@@ -134,14 +131,10 @@ a {
     gap: 1em
 }
 
-a:link {
-    color: whitesmoke;
-}
-
+a:link, 
 a:visited {
-    color: whitesmoke;
+    color: var(--text-color);
 }
-
 
 .sidebar li a:hover {
     font-size: 1.2em;
@@ -157,7 +150,6 @@ ul {
 li {
     padding: 4px 0;
 }
-
 
 
 /* -----  MAIN CONTENT ----- */
