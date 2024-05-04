@@ -169,23 +169,20 @@ main {
     gap: 1rem
 }
 
-main > * {
-    border: dotted black 4px;
-}
-
 .projects {
     grid-column: 1/2;
     grid-row: 1/3;
     padding: 12px;
 
     display: grid;
-    grid-template-rows: 5vh repeat(2, 1fr);
+    grid-template-rows: 5vh repeat(2, minmax(300px, 33%));
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));;
     gap: 1rem;
 }
 
 .projects h2 {
     grid-column: 1/-1;
+    align-self: start;
 }
 
 .project-actions {
@@ -202,6 +199,14 @@ main > * {
 
 .announcements {
     grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 5vh 1fr;
+    padding: 12px;
+    gap: 1rem
+}
+
+.announcements h2 {
+    align-self: center;
 }
 
 .announcements ul, 
@@ -211,10 +216,17 @@ main > * {
     border-radius: 1rem;
 }
 
-.announcements ul li:nth-child(-n+2) {
+.trending li {
+   display: flex;
+   gap: 5px
+}
+
+.topic {
+    display: block;
+}
+
+.announcements ul li:nth-child(-n+2),
+.trending ul li:nth-child(-n+3) {
     border-bottom: 1px solid black;
 }
 
-li img {
-    border: solid black 1px;
-}
