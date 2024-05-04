@@ -121,9 +121,16 @@ header {
 }
 
 .logo {
-    font-size: 2em;
     color: var(--text-color);
-    padding-top: 10px
+}
+
+.logo svg {
+    width: 3em;
+}
+
+
+h1{
+    font-size: 30px;
 }
 
 a {
