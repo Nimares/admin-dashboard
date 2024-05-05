@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 :root {
-    --main-bgc: rgb(92, 198, 199);
+    --main-bgc: rgb(234, 232, 232);
     --secondary-bgc: #A9D6E5;
     --standout-color: rgb(39 60 73);
     --border-shadow: #606162;
@@ -41,7 +41,6 @@ svg path {
     grid-template-areas: 
     "sidebar header"
     "sidebar main";
-    gap: 4px
 }
 
 /* -----  HEADER -----  */
@@ -177,8 +176,8 @@ main {
     grid-row: 1/3;
     padding: 12px;
     display: grid;
-    grid-template-rows: 5vh repeat(auto-fit, minmax(300px, 400px));
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
+    grid-template-rows: 5vh repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -193,10 +192,10 @@ main {
 }
 
 .project-card {
-    border: solid black 1px;
-    border-radius: 1em;
+    border-radius: 5px;
     padding: 1em;
-    place-self: center;
+    align-self: start;
+    background-color: var(--secondary-bgc);
 }
 
 
@@ -214,7 +213,7 @@ main {
 }
 
 .side-card-content {
-    background-color: whitesmoke;
+    background-color: var(--secondary-bgc);
     padding: 1rem;
     border-radius: 5px;
 }
