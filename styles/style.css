@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
-    --main-bgc: rgb(234, 232, 232);
-    --secondary-bgc: #A9D6E5;
+    --main-bgc: rgb(219, 221, 223);
+    --secondary-bgc: white
+    ;
     --standout-color: rgb(39 60 73);
-    --border-shadow: #606162;
+    --border-shadow: #9a9b9c;
     --complementary-color: #FFBF69;
     --text-color: whitesmoke;
 
@@ -14,20 +15,39 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-weight: 900;
-}
-
 svg {
     width: 1.5rem;
     vertical-align: middle;
 }
 svg path {
     fill: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 4px 0;
+}
+
+h1{
+    font-size: 30px;
+    text-shadow: 2px 2px 2px var(--border-shadow);
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1em
+}
+
+a:link, 
+a:visited {
+    color: var(--text-color);
 }
 
 .container {
@@ -52,7 +72,8 @@ header {
     grid-template-columns: 3fr 1fr;
     grid-row: repeat(2, 1fr);
     gap: 1rem;
-    padding: 1rem
+    padding: 1rem;
+    box-shadow: 0px 3px 3px var(--border-shadow);
 }
 
 
@@ -68,13 +89,13 @@ header {
 
 .user-greeting svg {
     grid-column: 1/2;
-    width: 6rem;
+    width: 100px;
     place-self: center;
 }
 
 .user-logo-border {
-    border: black solid 5px;
-    border-radius: 50%;
+    border: black solid 4px;
+    border-radius: 50px;
     padding: 2px
 }
 
@@ -83,11 +104,12 @@ header {
     display: block;
 }
 
-.btn-container{
+header .btn-container{
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
+/* Add as SVG, Add github link */
 .action-buttons {
     justify-self: end;
 }
@@ -97,6 +119,7 @@ header {
     gap: 4px;
 }
 
+/* Rename to container */
 .admin-buttons button {
     align-self: end;
     border-radius: 0.75rem;
@@ -108,6 +131,7 @@ header {
 
 
 /*  ----- SIDEBAR -----  */
+/* Rename to leftside-navigation bar */
 .sidebar {
     grid-area: sidebar;
     background-color: var(--standout-color);
@@ -127,38 +151,11 @@ header {
     width: 3em;
 }
 
-
-h1{
-    font-size: 30px;
-}
-
-a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1em
-}
-
-a:link, 
-a:visited {
-    color: var(--text-color);
-}
-
 .sidebar li a:hover {
     font-size: 1.2em;
     transform: scale(1.1);
     transition: all 500ms;
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 4px 0;
-}
-
 
 /* -----  MAIN CONTENT ----- */
 
@@ -191,49 +188,29 @@ main {
     justify-content: end;
 }
 
-.project-card {
+.card {
     border-radius: 5px;
     padding: 1em;
     align-self: start;
     background-color: var(--secondary-bgc);
+    box-shadow: 5px 5px 5px var(--border-shadow);
 }
 
-
-.side-card {
+/* Side-cards */
+.side-card-container {
     display: flex;
     flex-direction: column;
     padding: 0 12px;
-    width: 80%;
-    justify-self: end;
-}
-
-.side-card h2, 
-.side-card h3:nth-child(1) {
-    margin: 0;
-}
-
-.side-card-content {
-    background-color: var(--secondary-bgc);
-    padding: 1rem;
-    border-radius: 5px;
+    font-size: 14px;
 }
 
 .trending li {
    display: flex;
    gap: 5px;
-   font-size: 14px;
-}
-
-.trending li img {
-    width: 60px;
 }
 
 .topic {
     display: block;
 }
 
-.announcements ul li:nth-child(-n+2),
-.trending ul li:nth-child(-n+3) {
-    border-bottom: 1px solid black;
-}
 

@@ -2,7 +2,7 @@
 admin dashboard blueprint. Created as a project to practice css
 
 To-self: 
-* Add dummy content to project cards
+* [x]Add dummy content to project cards
 * Add variable font to stack
 * use combination of units to alter font size and cards
 * add border shadow
