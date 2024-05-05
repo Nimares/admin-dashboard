@@ -1,22 +1,28 @@
 # admin-dashboard
 admin dashboard blueprint. Created as a project to practice css
 
+To-self: 
+* Add dummy content to project cards
+* Add variable font to stack
+* use combination of units to alter font size and cards
+* add border shadow
+* add background colors and element colors
+* alter logo border
 
 To-do
 * [X]header:
-    - search bar
-    - title
-    - user-action buttons
-    - user account
 * [X]projects:
     - Auto creation of rows/columns
-    - variable color styles? using psuedo elements
 * announcements
-    - [X]add simple content
-    - [X]add underline using psuedo elements
     - add border-shadow
-* trending
-    - icons, title, etc
+* [x]trending
+* [0]general
+    - border-shadow
+    - color theme
+
+* scope creep
+    - light/dark mode
+    - expandable search bar
 * end project review
     - lessons learned
     - potential improvements
@@ -44,3 +50,5 @@ Lessons learned:
     * using a combination of nested svg, and display: flex, and transform on links create for enlarge hover effects
     * Leave color pallet for last OR create fullmockup and styleguide before page creation. 
     * Use SVG sparingly, otherwise your HTML will be cluttered
+    * use flexbox and grid when needed. each have their strengths. 
+    * using border on element that changes sizes can cause border warping in unwanted ways. 
