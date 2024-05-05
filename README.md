@@ -1,17 +1,13 @@
 # admin-dashboard
-admin dashboard blueprint. Created as a project to practice css
+Admin dashboard. Done as part of The Odin Project
+* 05.05.24 - Left project in satisfiable state. Will return later once i have reviewed lessons about responsive design.
 
-To-do
-* main-user logo svg - Find new
-* trend user svg - Add 4 new with color backgrounds
-* header button bolder font
+To-do: 
+Style: 
+    * main-user logo svg - Find new
+    * trend user svg - Add 4 new with color backgrounds
+    * header button bolder font
 
-
-* scope creep
-    - light/dark mode
-    - expandable search bar
-    - functioning links
-    - links to personal projects
 * end project review
     - lessons learned
     - potential improvements
@@ -20,12 +16,17 @@ To-do
     * look at other projects for commit conventions
     * look at other projects for doc conventions
 
-Ideas/Suggestions
+Potential future improvements: 
     * Apply all new css concepts learned
         - Fun with units / responsive design
         - alternative fonstacks / fallback var colors
         - background options? linear gradient?
         - tailwind color pallets 
+    * scope creep
+        - light/dark mode
+        - expandable search bar
+        - functioning links
+        - links to personal projects
 
 
 
